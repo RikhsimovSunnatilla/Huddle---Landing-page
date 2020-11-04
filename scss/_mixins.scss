@@ -1,0 +1,33 @@
+@mixin btn($color, $bg){ 
+  color: $color;
+  background-color: $bg;
+  font-size: 16px;
+  font-family: 'OpenSans-Bold', sans-serif;
+  text-transform: capitalize;
+  border: 2px solid transparent;
+  border-radius: 30px;
+  box-shadow: 0px 2px 10px 1px rgba(0, 0, 0, 0.2);
+  padding: 15px 60px;
+}
+
+@mixin title($fs, $mb){
+  color: $text-color;
+  font-size: $fs;
+  font-family: 'Poppins-SemiBold', sans-serif;
+  line-height: 1.5;
+  margin-bottom: $mb;
+}
+
+@mixin text($fs, $mb, $color: $text-color){
+    color: $color;
+    font-size: $fs;
+    font-family: 'OpenSans', sans-serif;
+    line-height: 1.5;
+    margin-bottom: $mb;
+  }
+
+  @mixin media($screen-width) {
+    @media only screen and (max-width: $screen-width) {
+      @content
+    }
+  }

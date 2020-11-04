@@ -1,0 +1,131 @@
+.footer {
+    color: $light-color;
+    background-color: $text-color;
+    font-family: 'OpenSans', sans-serif;
+    padding: 190px 0 60px;
+
+    a {
+        color: $light-color;
+    }
+
+    &__logo {
+        display: block;
+        max-width: 100%;
+        width: 260px;
+        height: auto;
+    }
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        margin: 40px 0;
+    }
+
+    &__item {
+
+        &--lg {
+            width: 31%;
+        }
+
+    }
+
+    &__text {
+        @include text(18px, 20px, $light-color);
+    }
+
+    &__info {
+        display: flex;
+
+        i {
+            padding: 5px 20px 0 0;
+        }
+    }
+
+    &__list {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    &__link:link, &__link:visited {
+        font-size: 20px;
+        font-family: 'OpenSans', sans-serif;
+        margin-bottom: 20px; 
+
+        &:hover, &:active {
+            text-decoration: underline;
+        }
+    }
+
+    &__icon {
+        width: 35px;
+        height: 35px;
+        font-size: 16px;
+        text-align: center;
+        border: 1px solid $light-color;
+        border-radius: 50%;
+        padding: 6px 0;
+        margin-right: 10px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+        
+        &:hover {
+            color: $text-color;
+            background-color: $light-color;
+        }
+    
+    }
+
+    &__copy {
+        font-size: 16px;
+        text-align: right;
+    }
+}
+
+@include media(375px) {
+
+    .footer {
+        padding: 140px 10px 50px;
+
+        &__logo {
+            width: 190px;
+        }
+
+        &__inner {
+            justify-content: start;
+            flex-direction: column;
+            margin: 20px 0;
+        }
+
+        &__item {
+            width: 100%;
+
+            &--lg {
+                margin-bottom: 35px;
+            }
+
+            &-icons {
+                text-align: center;
+                margin-top: 30px;
+            }
+
+        }
+
+        &__text {
+            font-size: 16px;
+        }
+
+        &__link {
+            font-size: 17px;
+        }
+
+        &__copy {
+            font-size: 12px;
+            text-align: center;
+        }
+
+    }
+
+}

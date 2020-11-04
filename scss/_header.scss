@@ -1,0 +1,116 @@
+.header {
+  width: 100%;
+  background: url(../images/bg-hero-desktop.svg) center no-repeat;
+  background-color: $light-color;
+  background-size: cover;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 45px;
+  }
+
+  &__logo {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .btn.light {
+    @include btn($text-color, #fff);
+
+    &:hover {
+      border-color: $text-color;
+      box-shadow: 0px 4px 10px 4px rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  &__intro {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 70px 0;
+
+    &-item {
+      &--sm {
+        width: 42%;
+      }
+
+      &--lg {
+        width: 53%;
+      }
+
+      .title {
+        @include title(42px, 28px);
+      }
+
+      .text {
+        @include text(18px, 30px);
+      }
+
+      .btn.pink {
+        @include btn(#fff, $primary-color);
+
+        &:hover {
+          background-color: darken($primary-color, 20%);
+          box-shadow: 0px 4px 10px 4px rgba(0, 0, 0, 0.2);
+          border-color: transparent;
+        }
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+  }
+}
+
+@include media(375px) {
+
+  .header {
+
+    &__inner {
+      padding-top: 30px;
+    }
+
+    &__logo {
+      width: 100px;
+    }
+
+    .btn.light {
+        font-size: 11px;
+        box-shadow: 0px 2px 15px 1px rgba(0, 0, 0, 0.1);
+        padding: 2px 20px;
+      }
+
+    &__intro {
+      padding: 80px 15px 30px;
+
+      &-item {
+        width: 100%;
+        text-align: center;
+      }
+
+    }
+
+    .title {
+      font-size: 24px;
+      line-height: 1.4;
+      margin-bottom: 25px;
+    }
+
+    .text {
+      font-size: 16px;
+    }
+
+    .btn.pink {
+      font-size: 12px;
+      padding: 10px 55px;
+      margin-bottom: 60px;
+    }
+
+  }
+
+}
